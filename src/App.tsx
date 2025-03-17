@@ -26,8 +26,6 @@ function App() {
           .split(" - ")
           .map((date) => new Date(date.trim()).getTime());
 
-        console.log(battle.dateRange);
-
         return {
           ...battle,
           startDate,
@@ -36,6 +34,7 @@ function App() {
       }),
     []
   );
+
   return (
     <div>
       {enhancedDates.map((props, idx) => {
